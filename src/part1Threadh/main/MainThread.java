@@ -19,9 +19,9 @@ public class MainThread {
         final int peopleCount = scanner.nextInt();
         System.out.println("Enter max of amount people");
         final int maxAmount = scanner.nextInt();
-
+//        MyThread.amount = maxAmount;
         MyThread myThread;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < peopleCount; i++) {
             System.out.println();
                 myThread = new MyThread(maxAmount);
                 myThread.start();
