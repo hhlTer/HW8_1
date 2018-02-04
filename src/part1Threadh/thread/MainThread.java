@@ -1,4 +1,4 @@
-package part1Threadh.main;
+package part1Threadh.thread;
 
 import part1Threadh.thread.MyThread;
 
