@@ -1,11 +1,11 @@
-package part1Threadh.thread;
+package part1Threadh;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
 public class MyThread extends Thread {
 
-    public MyThread(int a){
+    MyThread(int a){
         if(semaphore == null) semaphore = new Semaphore(a);
     }
 
@@ -22,7 +22,7 @@ public class MyThread extends Thread {
         System.out.println("Жду у входа в библиотеку :" + Thread.currentThread().getName());
         semaphore.acquire();
 
-        System.out.println(ANSI_RED + "Подошел к двери с улицьі"+ ANSI_RESET + Thread.currentThread().getName());
+        System.out.println(ANSI_RED + "Подошел к двери с улици"+ ANSI_RESET + Thread.currentThread().getName());
         doorIn();
 
         System.out.println("Вошел в библиотеку :" + Thread.currentThread().getName());
