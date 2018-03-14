@@ -1,11 +1,11 @@
-package part1Threadh;
+package task1;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
-public class MyThread extends Thread {
+public class DoorSemaphore extends Thread {
 
-    MyThread(int a){
+    DoorSemaphore(int a){
         if(semaphore == null) semaphore = new Semaphore(a);
     }
 

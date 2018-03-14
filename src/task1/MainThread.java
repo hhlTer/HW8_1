@@ -1,4 +1,4 @@
-package part1Threadh;
+package task1;
 
 import java.io.InputStreamReader;
 import java.util.Scanner;
@@ -13,11 +13,11 @@ public class MainThread {
         final int peopleCount = scanner.nextInt();
         System.out.print("Enter max of amount people ");
         final int maxAmount = scanner.nextInt();
-        MyThread myThread;
+        DoorSemaphore doorSemaphore;
         for (int i = 0; i < peopleCount; i++) {
             System.out.println();
-                myThread = new MyThread(maxAmount);
-                myThread.start();
+                doorSemaphore = new DoorSemaphore(maxAmount);
+                doorSemaphore.start();
         }
     }
 }
