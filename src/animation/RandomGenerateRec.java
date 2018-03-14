@@ -50,21 +50,17 @@ public class RandomGenerateRec extends Rectangle{
 
         if (vectorType.name().startsWith("Left")) {
             if (vectorType.name().endsWith("Up")) {
-                System.out.println(vectorType.name());
                 point.x = toLeftBorder < toUpBorder ? 0 : toLeftBorder - toUpBorder;
                 point.y = toLeftBorder < toUpBorder ? toUpBorder - toLeftBorder: 0;
             } else { //Left_Down
-                System.out.println(vectorType.name());
                 point.x = toLeftBorder < toDownBorder ? 0 : toLeftBorder - toDownBorder;
                 point.y = toLeftBorder < toDownBorder ? toUpBorder + toLeftBorder : pointLU.y + toDownBorder;
             }
         } else {
-            System.out.println(vectorType.name());
             if (vectorType.name().endsWith("Up")) {//Right_Up
                 point.x = toRightBorder < toUpBorder ? pointLU.x + toRightBorder : pointLU.x + toUpBorder;
                 point.y = toRightBorder < toUpBorder ? pointLU.y - toRightBorder : 0;
             } else { //Right_Down
-                System.out.println(vectorType.name());
                 point.x = toRightBorder < toDownBorder ? pointLU.x + toRightBorder : pointLU.x + toDownBorder;
                 point.y = toRightBorder < toDownBorder ? pointLU.y + toRightBorder : pointLU.y + toDownBorder;
             }
